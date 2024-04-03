@@ -1,0 +1,4 @@
+asyncio==3.4.3
+py-cord==2.4.1
+pyTelegramBotAPI==4.15.5
+python-dotenv
