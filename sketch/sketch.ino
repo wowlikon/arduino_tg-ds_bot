@@ -5,9 +5,12 @@ void setup() {
   while (!Serial); // !!!ONLY FOR ARDUINO LEONARDO!!!
 
   Serial.println("Hello world");
-  pinMode(A0, OUTPUT); // Geen
-  pinMode(A1, OUTPUT); // Red
-  pinMode(A2, OUTPUT); // Blue
+  pinMode(A0, OUTPUT); // -
+  pinMode(A1, OUTPUT); // Geen
+  pinMode(A2, OUTPUT); // Red
+  pinMode(A3, OUTPUT); // Blue
+
+  digitalWrite(A0, LOW);
 }
 
 void loop() {
@@ -21,9 +24,9 @@ void loop() {
     }
 
     // Set LEDs
-    digitalWrite(A2, bits[0]); // Red
-    digitalWrite(A0, bits[1]); // Geen
-    digitalWrite(A1, bits[2]); // Blue
+    digitalWrite(A3, bits[0]); // Red
+    digitalWrite(A1, bits[1]); // Geen
+    digitalWrite(A2, bits[2]); // Blue
 
     // Return bits (DEBUG)
     for (int i = 7; i >= 0; i--) {

@@ -29,7 +29,7 @@ print(list(map(lambda x: x.name, ports)))
 cmds = []
 
 # Create port object
-ard = serial.Serial('COM3', 9600)
+ard = serial.Serial('/dev/ttyACM0', 9600)
 if not ard.is_open: ard.open()
 
 # Create bot
